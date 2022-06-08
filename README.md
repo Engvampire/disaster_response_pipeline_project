@@ -22,7 +22,7 @@ This project will involve the building of ETL and Machine Learning pipelines to 
                 |-- DisasterResponse.db
                 |-- process_data.py
           |-- models
-                |-- classifier.pkl
+                |-- classifier.zip   --> to be unzipped to have classifier.pkl
                 |-- train_classifier.py
           |-- Preparation
                 |-- categories.csv
@@ -44,7 +44,7 @@ This project will involve the building of ETL and Machine Learning pipelines to 
 Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle, Sklearn, plotly and flask libraries.
 
 ## Instructions
-1. Unzip the file : 
+1. Unzip the file : disaster_response_pipeline_project/models/classifier.zip
 2. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
