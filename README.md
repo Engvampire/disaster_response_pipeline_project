@@ -44,17 +44,18 @@ This project will involve the building of ETL and Machine Learning pipelines to 
 Must runing with Python 3 with libraries of numpy, pandas, sqlalchemy, re, NLTK, pickle, Sklearn, plotly and flask libraries.
 
 ## Instructions
-1. Run the following commands in the project's root directory to set up your database and model.
+1. Unzip the file : 
+2. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
+3. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+4. Go to http://0.0.0.0:3001/
 
 ## Licensing, Authors, Acknowledgements
 Feel free to use this app as long as it is for the greater good.
