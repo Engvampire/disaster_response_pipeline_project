@@ -38,13 +38,17 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/index')
 def index():
     
-    # extract data needed for visuals
+    # extract data needed for visual 1
     categories =  df[df.columns[4:]]
     categories_counts = (categories.mean()*categories.shape[0])
     categories_names = list(categories_counts.index)
     
+      # extract data needed for visual 2
+    genre_counts = df.groupby('genre').count()['message']
+    genre_names = list(genre_counts.index)
     
-    # create visuals
+    
+    # create visual1
     graphs = [
         {
             'data': [
@@ -61,6 +65,29 @@ def index():
                 },
                 'xaxis': {
                     'title': "Category"
+                }
+            }
+        }
+    ]
+    
+    
+     # create visual 2
+    graphs = [
+        {
+            'data': [
+                Bar(
+                    x=genre_names,
+                    y=genre_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Genres',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Genre"
                 }
             }
         }
